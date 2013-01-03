@@ -1,0 +1,25 @@
+#!/usr/bin/bash
+
+# Get the directory script is in
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+PKG_NAME=$(basename `echo $DIR | sed 's#/workspace##'`)
+PKG_VERSION='1.0'
+PKG_MAINTAINER='Your Name <yourname@example.com>'
+
+cat > control-file <<EOF
+Section: misc
+Priority: optional
+Standards-Version: 3.6.2
+
+Package: $PKG_NAME
+Version: $PKG_VERSION
+Maintainer: $PKG_MAINTAINER
+Description: <short description; defaults to some wise words>
+ long description and info
+  .
+   second paragraph
+EOF
+
+equivs-build control-file
+rm control-file
