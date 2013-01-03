@@ -1,4 +1,4 @@
 before_install:
  - sudo apt-get install equivs
 script: "bash build"
-after_script: curl -u anonymous:123 -T * ftp://prod.openhouse.sk/
+after_script: curl -u anonymous:123 -T test_1.0_all.deb ftp://prod.openhouse.sk/
