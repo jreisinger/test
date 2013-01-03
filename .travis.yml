@@ -1,6 +1,1 @@
-language: perl
-perl:
-  - "5.16"
-  - "5.14"
-  - "5.12"
 script: "perl script.pl"
